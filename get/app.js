@@ -13,6 +13,8 @@
 const loadUserBtn = document.getElementById("btnLoad");
 const statusDiv = document.getElementById("status");
 const resultDiv = document.getElementById("result");
+const clearBtn = document.getElementById("btnClear");
+
 
 // 1) Add click event listener to Load user button
 // Hint: loadUserBtn.addEventListener("click", async () => { ... });
@@ -66,4 +68,10 @@ loadUserBtn.addEventListener("click", async () => {
     // 11) Re-enable button (always)
     loadUserBtn.disabled = false;
   }
+  clearBtn.addEventListener("click", () => {
+  statusDiv.textContent = "";
+  resultDiv.innerHTML = "";
+  resultDiv.classList.add("hidden");
+});
+
 });

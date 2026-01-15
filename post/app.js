@@ -19,6 +19,7 @@ const inputMessage = document.getElementById("msg");
 const sendBtn = document.getElementById("btnSend");
 const statusDiv = document.getElementById("status");
 const resultPre = document.getElementById("output");
+const clearBtn = document.getElementById("btnClear");
 
 // 1) Add click event listener to the Send button
 // Hint: sendBtn.addEventListener("click", async () => { ... });
@@ -80,4 +81,10 @@ sendBtn.addEventListener("click", async () => {
     // TODO: sendBtn.disabled = false;
     sendBtn.disabled = false;
   }
+  clearBtn.addEventListener("click", () => {
+  inputMessage.value = "";
+  statusDiv.textContent = "";
+  resultPre.textContent = "";
+});
+
 });
