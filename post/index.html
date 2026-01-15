@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- TASK B1 (1 pt): Add Tailwind Play CDN in <head> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Send Message (POST)</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <!-- TASK B1 (3 pts): Create a card layout with:
+      - Title: Send Message (POST)
+      - Text input (id="msg", placeholder="Type a message...")
+      - Button (id="btnSend") text: "Send"
+      - Status text area (id="status")
+      - Output area (id="output") for showing JSON response
+      - Use at least 6 Tailwind utility classes
+    -->
+
+  <!-- Your UI here -->
+  <div class="bg-white p-6 rounded-lg shadow-md w-96">
+    <h1 class="text-xl font-bold mb-4">Send Message (POST)</h1>
+
+    <input id="msg" type="text" placeholder="Type a message..." class="border p-2 w-full rounded mb-3" />
+
+    <button id="btnSend" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+      Send
+    </button>
+
+    <p id="status" class="mt-3 text-sm"></p>
+
+    <pre id="output" class="bg-gray-100 p-3 mt-3 rounded text-sm overflow-auto"></pre>
+  </div>
+
+  <!-- TASK B1 (1 pt): Link post/app.js (use defer) -->
+  <script src="./app.js" defer></script>
+
+</body>
+
+</html>
